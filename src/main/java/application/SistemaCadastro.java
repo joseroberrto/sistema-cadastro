@@ -6,12 +6,13 @@ import util.ConexaoFactory;
 import dao.CadastroRepository;
 import view.CadastroView;
 import view.ListCadastrosView;
-
 import java.util.List;
 import java.util.Scanner;
 
+
 public class SistemaCadastro {
     public static void main(String[] args) {
+        //entre na pasta util/ConexaoFactory para config do DB MySQL
         ConexaoFactory.conectar();
         CadastroRepository repository = new CadastroRepository() ;
         Cadastro cadastro;

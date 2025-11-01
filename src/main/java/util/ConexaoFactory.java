@@ -3,6 +3,10 @@ package util;
 import java.sql.*;
 
 public class ConexaoFactory {
+    private static final String urlRoot = "jdbc:mysql://localhost:3306/";
+    private static final String user = "root";
+    private static  final String password = "SuaSenhaAqui";//troque pela sua senhar usada no mysql
+    private  static  final String dbName = "sistema_cadastro";//nome do DB
     private static Connection conexao;
 
     public static Connection getConexao() {
@@ -10,10 +14,6 @@ public class ConexaoFactory {
     }
 
     public static void conectar() {
-        String urlRoot = "jdbc:mysql://localhost:3306/";
-        String user = "root";
-        String password = "SuaSenhaAqui";//troque pela sua senhar usada no mysql
-        String dbName = "sistema_cadastro";
        try {
            // conecta sem banco para criar se necessário
            conexao = DriverManager.getConnection(urlRoot, user, password);
